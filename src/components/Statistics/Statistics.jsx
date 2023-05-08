@@ -14,11 +14,11 @@ export function Statistics({ good, neutral, bad, total, positivePercentage }) {
         Bad:<span className={css.list__span}>{bad}</span>
       </li>
       <li className={css.list__item}>
-        Total:<span className={css.list__span}>{total()}</span>
+        Total:<span className={css.list__span}>{total}</span>
       </li>
       <li className={css.list__item}>
         Positive feedback:
-        <span className={css.list__span}>{positivePercentage()}%</span>
+        <span className={css.list__span}>{positivePercentage}%</span>
       </li>
     </ul>
   );
@@ -28,6 +28,6 @@ Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-  positivePercentage: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
 };
